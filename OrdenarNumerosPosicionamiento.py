@@ -22,14 +22,15 @@ Candy = []
 print(f"El numero mas grande es: {NumMasGrande}")
 for a in range(NumMasGrande + 1):
     Candy.append(0)
+print("Lista Finalizada.")
 #-----------------------------------------------------------------------------
 #Asignamos los numeros a sus respectivas posiciones:--------------------------
 while Numeros != []:
     Candy[Numeros[0]] += 1
     Numeros.pop(0)
 #-----------------------------------------------------------------------------
+print("HolaCandy")
 #Generamos lista Ordenada:----------------------------------------------------
-
 for i,a in enumerate(Candy):
     for b in range(a):
         Resultado.append(i)
