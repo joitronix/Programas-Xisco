@@ -9,7 +9,7 @@ Numeros = []
 Resultado = []
 Cantidad = int(input("Cantidad de Numeros a ordenar?: "))
 for c in range(Cantidad):
-    Numeros.append(random.randint(0,100000))
+    Numeros.append(random.randint(0,999999999))
 #-----------------------------------------------------------------------------
 #Buscamos el numero mas grande:-----------------------------------------------
 NumMasGrande = 0
@@ -18,19 +18,28 @@ for c in Numeros:
         NumMasGrande = c
 #-----------------------------------------------------------------------------
 #Generamos lista de posicionamiento de numeros:-------------------------------
-candy = []
+Candy = []
 print(f"El numero mas grande es: {NumMasGrande}")
 for a in range(NumMasGrande + 1):
-    candy.append(0)
+    Candy.append(0)
 #-----------------------------------------------------------------------------
 #Asignamos los numeros a sus respectivas posiciones:--------------------------
-for z in Numeros:
-    candy[z] = candy[z] + 1
+while Numeros != []:
+    Candy[Numeros[0]] += 1
+    Numeros.pop(0)
 #-----------------------------------------------------------------------------
 #Generamos lista Ordenada:----------------------------------------------------
-for i,a in enumerate(candy):
+
+for i,a in enumerate(Candy):
     for b in range(a):
         Resultado.append(i)
+"""
+Contador = 0
+while Candy != []:
+    for a in range(Candy[0]):
+        Resultado.append(Contador)
+    Candy.pop(0)
+    Contador += 1
+"""
 #-----------------------------------------------------------------------------
-print(Resultado)
-print("--- %s seconds ---" % (time.time() - start_time))
+print(int(time.time() - start_time) / 60)
