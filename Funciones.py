@@ -4,7 +4,7 @@ def Suma(*args):
 #-----------------------------------------------------------------------------------------------------
 
 #=====================================================================================================
-def Multiplicacion(*args):
+def Multiplicacion(* args):
     Result = ""
     #Range le quitamos uno para que no muestre el ultimo digito(por defecto ya quita el extra de len)
     for IndexNumber in range(0,len(args) - 1):
