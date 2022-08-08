@@ -35,9 +35,3 @@ def Temperatura(UnidadMedida,Temperatura):
     else:
         return f"La temperatura {Temperatura} ºF = {round((Temperatura - 32) / 1.8 , 2)} ºC"
 #-----------------------------------------------------------------------------------------------------
-#=====================================================================================================
-def TextoImpresoLento(Texto,velocidad):
-    for g in Texto:
-        print( g , end='' , flush=True )
-        time.sleep(velocidad)
-#-----------------------------------------------------------------------------------------------------
