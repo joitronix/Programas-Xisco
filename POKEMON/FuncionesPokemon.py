@@ -8,6 +8,8 @@ def TextoImpresoLento(Texto,velocidad):
         print( g , end='' , flush=True )
         time.sleep(velocidad)
 #-----------------------------------------------------------------------------------------------------
+
+#Fallo ja que esta relacionat amb una clase hauria de ser una funcio dins sa clase.
 #=====================================================================================================
 def QuitarVida(Vida,Cantidad):
     Vida = list(Vida)
