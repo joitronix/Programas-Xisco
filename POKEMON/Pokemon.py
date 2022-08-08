@@ -7,7 +7,7 @@ POKEMONSTATS2 = ClasePokemon.Pokemon("Rayquaza",123,23,1,{"IMPACTRUENO":3,"ONDA 
 
 VIDAPOKEMON1 = POKEMONSTATS1.Nombre + f"  ||{'='*POKEMONSTATS1.Vida}||"
 VIDAPOKEMON2 = POKEMONSTATS2.Nombre + f"  ||{'='*POKEMONSTATS2.Vida}||"
-
+#-------------------------------------------------------------------------------------
 while True:
     print("")
     print(VIDAPOKEMON1)
@@ -22,7 +22,7 @@ while True:
     print(f"Bonificacion de ataque: {POKEMONSTATS2.AtaqueBase}")
     print(f"Bonificacion de velocidad: {POKEMONSTATS2.DefensaBase}")
     print(f"Bonificacion de defensa: {POKEMONSTATS2.VelocidadBase}")
-    
+#BASTARIA QUE FOS UNA FUNCIO AMB SA VARIABLE POKEMONSTATS------------------------------
     if (POKEMONSTATS1.VelocidadBase > POKEMONSTATS2.VelocidadBase):
         POKEMONSTATS1.ImprimirAtaques()
         Ataque = int(input("Elija el ataque seleccionado: ")) - 1
