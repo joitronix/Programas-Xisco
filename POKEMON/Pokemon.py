@@ -2,6 +2,7 @@ import time
 import FuncionesPokemon
 import ClasePokemon
 import random
+
 POKEMONSTATS1 = ClasePokemon.Pokemon("MetalGreymon",1,2,3,{"IMPACTRUENO":2,"ONDA VOLTIO":1,"PSICORRAYO":3,"RAYO HIELO":1},60)
 POKEMONSTATS2 = ClasePokemon.Pokemon("Rayquaza",123,23,1,{"IMPACTRUENO":3,"ONDA VOLTIO":1,"PSICORRAYO":10,"RAYO HIELO":1},50)
 
