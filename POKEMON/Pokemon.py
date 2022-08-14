@@ -2,14 +2,16 @@ import time
 import FuncionesPokemon
 import ClasePokemon
 import random
+import os
 
-POKEMONSTATS1 = ClasePokemon.Pokemon("MetalGreymon",1,2,3,{"IMPACTRUENO":2,"ONDA VOLTIO":1,"PSICORRAYO":3,"RAYO HIELO":1},60)
-POKEMONSTATS2 = ClasePokemon.Pokemon("Rayquaza",123,23,1,{"IMPACTRUENO":3,"ONDA VOLTIO":1,"PSICORRAYO":10,"RAYO HIELO":1},50)
+POKEMONSTATS1 = ClasePokemon.Pokemon("MetalGreymon",1,2,3,{"IMPACTRUENO":random.randint(1, 3),"ONDA VOLTIO":random.randint(1, 3),"PSICORRAYO":random.randint(1, 3),"RAYO HIELO":random.randint(1, 3)},60)
+POKEMONSTATS2 = ClasePokemon.Pokemon("Rayquaza",123,23,1,{"IMPACTRUENO":random.randint(1, 3),"ONDA VOLTIO":random.randint(1, 3),"PSICORRAYO":random.randint(1, 3),"RAYO HIELO":random.randint(1, 3)},50)
 
 VIDAPOKEMON1 = POKEMONSTATS1.Nombre + f"  ||{'='*POKEMONSTATS1.Vida}||"
 VIDAPOKEMON2 = POKEMONSTATS2.Nombre + f"  ||{'='*POKEMONSTATS2.Vida}||"
 #-------------------------------------------------------------------------------------
 while True:
+    os.system("cls")
     print("")
     print(VIDAPOKEMON1)
     print("")
@@ -37,6 +39,9 @@ while True:
         VIDAPOKEMON1 = FuncionesPokemon.QuitarVida(VIDAPOKEMON1,list(POKEMONSTATS1.Ataques.values())[Ataque])
         
         
-    if '=' not in VIDAPOKEMON1 or '=' not in VIDAPOKEMON2:
-        VIDAPOKEMON1 = FuncionesPokemon.TextoImpresoLento("Combate Finalizado.",0.03)
-        break 
+    if '=' not in VIDAPOKEMON1:
+        FuncionesPokemon.TextoImpresoLento(f"Combate Finalizado ganador {POKEMONSTATS2.Nombre}.",0.03)
+        break
+    elif '=' not in VIDAPOKEMON2:
+        FuncionesPokemon.TextoImpresoLento(f"Combate Finalizado ganador {POKEMONSTATS1.Nombre}.",0.03)
+        break
