@@ -36,6 +36,4 @@ def InserTabla(Tabla,ListaInsert):
     except:
         print("Error Insertando.")
         
-for a in range(1,1000000):
-    print(a)
-    InserTabla("Nombre",["perro","Candy"])
+ImprimirTabla("Nombre")
