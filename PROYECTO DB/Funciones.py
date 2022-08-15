@@ -22,6 +22,7 @@ def ImprimirTabla(Tabla):
                 print(a.strip().split("º"))
     else:
         print(f"La tabla {Tabla} no existe")
+
 def InserTabla(Tabla,ListaInsert):
     try:
         if os.path.exists(f'{Tabla}.txt'):
@@ -36,4 +37,4 @@ def InserTabla(Tabla,ListaInsert):
     except:
         print("Error Insertando.")
         
-ImprimirTabla("Nombre")
+CrearTabla("holacandy",["NOMBRE","APELLIDO","DNI"])
