@@ -20,6 +20,8 @@ def ImprimirTabla(Tabla):
         with open(f"{Tabla}.txt", "r") as file:
             for a in file.readlines():
                 print(a.strip().split("º"))
+    else:
+        print(f"La tabla {Tabla} no existe")
 def InserTabla(Tabla,ListaInsert):
     try:
         if os.path.exists(f'{Tabla}.txt'):
@@ -33,6 +35,7 @@ def InserTabla(Tabla,ListaInsert):
             print(f"La tabla {Tabla} no existe.")
     except:
         print("Error Insertando.")
-
-ImprimirTabla("Nombre")
-InserTabla("Nombre",["perro","Candy"])
+        
+for a in range(1,1000000):
+    print(a)
+    InserTabla("Nombre",["perro","Candy"])
