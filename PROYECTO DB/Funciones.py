@@ -14,7 +14,12 @@ def SelectColumnasTabla(Tabla):
     if os.path.exists(f'{Tabla}.txt'):
         with open(f"{Tabla}.txt", "r") as file:
             return file.readline().strip().split("º")
-
+        
+def ImprimirTabla(Tabla):
+    if os.path.exists(f'{Tabla}.txt'):
+        with open(f"{Tabla}.txt", "r") as file:
+            for a in file.readlines():
+                print(a.strip().split("º"))
 def InserTabla(Tabla,ListaInsert):
     try:
         if os.path.exists(f'{Tabla}.txt'):
@@ -29,34 +34,5 @@ def InserTabla(Tabla,ListaInsert):
     except:
         print("Error Insertando.")
 
-CrearTabla("Clientes",["Nombre","Apellido","TipoDeSangre"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-InserTabla("Clientes",["Tomeu","Pandero","a-Negativo"])
-
+ImprimirTabla("Nombre")
+InserTabla("Nombre",["perro","Candy"])
